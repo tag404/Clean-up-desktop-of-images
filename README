@@ -1,0 +1,8 @@
+An intern asked me to create a program taht would easily clear up her desktop of all teh photos she takes for one of her jobs.
+(When I say desktop, I mean teh Desktop directory was covered in different file types of photos.)
+
+Here is what I created.
+
+When the program is run, it will create folders based off the file type, specifically photos, ex. .jpg, .jpeg, .png.
+
+That's really it, very simple but it works for her. ^.^
