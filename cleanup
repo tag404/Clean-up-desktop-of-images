@@ -1,0 +1,18 @@
+import os
+import shutil
+from os.path import isfile, join
+
+def organize_files(directory):
+    for filename in os.listdir(directory):
+        if isfile(join(directory, filename)):
+            file_extension = os.path.splitext(filename)[1][1:].lower()
+            if file_extension in ['jpg', 'jpeg', 'jpe', 'jif', 'png']:
+                new_directory = join(directory, file_extension)
+                if not os.path.exists(new_directory):
+                    os.makedirs(new_directory)
+                shutil.move(join(directory, filename), join(new_directory, filename))
+
+# Set the directory to the desktop
+desktop_directory = os.path.join(os.path.expanduser("~"), "Desktop")
+
+organize_files(desktop_directory)
